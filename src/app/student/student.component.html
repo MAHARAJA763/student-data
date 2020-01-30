@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="align-items-center mb-2 d-flex">
+        <h1>Students</h1>
+        <a class="ml-auto btn btn_success" routerLink="/addstudent">Add Student</a>
+    </div>
+    <div class="border rounded border-top-0">
+        <div class="table-responsive">
+            <table class="table table-md mb-0" style="font-size: 14px;">
+                <thead>
+                    <tr>
+                        <th scope="col" width="140" style="min-width: 120px;">
+                            ID
+                        </th>
+                        <th scope="col" width="140" style="min-width: 120px;">
+                            First Name
+                        </th>
+                        <th scope="col" width="140" style="min-width: 120px;">
+                            Last Name
+                        </th>
+                        <th scope="col" width="140" style="min-width: 120px;">
+                            Email Address
+                        </th>
+                        <th scope="col" width="140" style="min-width: 120px;">
+                            Password
+                        </th>
+                        <th scope="col" width="140" style="min-width: 120px;"></th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let student of students">
+
+                    <tr>
+                        <td>
+                            {{student.id}}
+                        </td>
+                        <td>
+                            {{student.firstname}}
+                        </td>
+                        <td>
+                            {{student.lastname}}
+                        </td>
+                        <td>
+                            {{student.email}}
+                        </td>
+                        <td>
+                            {{student.password}}
+                        </td>
+                        <td class="text-right">
+                            <a class="mx-2 cursor" [routerLink]="['/editstudent', student.id]" title="Edit">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            |
+                            <a class="mx-2 cursor" title="Delete">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

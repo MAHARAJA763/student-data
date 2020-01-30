@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-8 mx-auto px-lg-4 mt-lg-5 pt-lg-4">
+            <a class="text-center logo-text mb-5 d-block cursor">Student Data</a>
+            <form [formGroup]="addStudentForm">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" formControlName="firstName" />
+                            <span *ngIf="addStudentForm.controls.firstName.touched && addStudentForm.controls.firstName.invalid" class="invalid_err">Enter valid first name</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" formControlName="lastName" />
+                            <span *ngIf="addStudentForm.controls.lastName.touched && addStudentForm.controls.lastName.invalid" class="invalid_err">Enter valid last name</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="text" class="form-control" formControlName="email" />
+                    <span *ngIf="addStudentForm.controls.email.touched && addStudentForm.controls.email.invalid" class="invalid_err">Enter valid email address</span>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" formControlName="password" />
+                    <span *ngIf="addStudentForm.controls.password.touched && addStudentForm.controls.password.invalid" class="invalid_err">Enter valid password</span>
+                </div>
+                <div class="form-groupp">
+                    <button class="btn-block btn-lg btn_success" (click)="addStudent()">Add Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

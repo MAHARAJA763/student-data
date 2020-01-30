@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.logo-text{
+    font-size: 2rem;
+}
+.cursor{
+    cursor: pointer;
+}
+.btn_success{
+    background-color: #28a745;
+    border: 0;
+    color: #fff;
+}
+.btn_success:hover{
+    background-color: #1e7e34;
+}
+.invalid_err{
+    color: red;
+    font-size: small;
+}
